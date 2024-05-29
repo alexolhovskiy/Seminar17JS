@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Regular.ttf");
+}
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+@mixin flex-layout($x,$y,$d) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+    gap: $d;
+}
+
+
+@mixin common-text($size,$height,$weight,$transform,$color) {
+    font-family: Lato;
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    text-transform: $transform;
+    color: $color;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.center {
+    padding-left: calc(50% - 571px);
+    padding-right: calc(50% - 571px);
+}
+.center_t {
+    padding-left: calc(50% - 800px);
+    padding-right: calc(50% - 800px);
+}

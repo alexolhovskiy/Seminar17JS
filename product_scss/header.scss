@@ -1,0 +1,220 @@
+/////ALEX OLHOVSKIY//////////
+/////HEADER//////////////
+
+//@import 'common-templates';
+@import 'details_header';
+@import 'menu';
+
+.header {
+    &__top {
+        @include flex-layout(space-between,center,0);
+        height: 100px;
+        background-color: #ffffff;
+        border: 1px solid #ececec;
+
+        &_right {
+            @include flex-layout(space-between,center,30px);
+
+            &_logo {
+                @include flex-layout(space-between,center,10px);
+
+                &_img {
+                    margin-bottom: 5px;
+                }
+
+                &_black {
+                    @include common-text(27px,32px,300,uppercase,#222222);
+
+                    &_red {
+                        font-weight: 900;
+                        color: #f16d7f;
+                    }
+                }
+            }
+
+            &_search {
+                @include flex-layout(center,center,0);
+                position: relative;
+
+                &_brows {
+                    @include flex-layout(center,center,5px);
+                    width: 87px;
+                    height: 38px;
+                    background-color: #cdcdcc;
+                    background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%);
+                    border: 1px solid #e6e6e6;
+                    border-radius: 3px 0px 0px 3px;
+
+
+                    &_text {
+                        @include common-text(14px,32px,300,0,#222222);
+                    
+                    }
+                }
+
+                &_search-box {
+                    @include flex-layout(flex-end,center,5px);
+                    width: 317px;
+                    height: 38px;
+                    background-color: #ffffff;
+                    border: 1px solid #e6e6e6;
+                    border-radius: 0px 3px 3px 0px;
+
+                    &_input {
+                        width: 270px;
+                        height: 38px;
+                        opacity:30%;
+                    }
+
+                    &_button {
+                        @include flex-layout(center,center,0);
+                        width: 38px;
+                        height: 38px;
+                        border-left: 1px solid #e6e6e6;
+                    }
+                }
+            }
+        }
+
+        &_account {
+            @include flex-layout(space-between,center,20px);
+
+            &_button {
+                @include flex-layout(center,center,10px);
+                width: 130px;
+                height: 38px;
+                border: 1px solid #ffffff;
+                background-color: #f16d7f;
+
+                &_text {
+                    @include common-text(15px,32px,400,0,#ffffff);
+                }
+            }
+
+            &_button:hover {
+                background-color: #ffffff;
+                border: 1px solid #f16d7f;
+            }
+
+            &_button:hover .header__top_account_button_text {
+                //@include common-text(15px,32px,400,0,#f16d7f);
+                color: #f16d7f;
+            }
+
+            &_button:hover .header__top_account_button_img {
+                //@include common-text(15px,32px,400,0,#f16d7f);
+                display: none;
+            }
+        }
+    }
+}
+
+.navigation {
+
+    @include flex-layout(center,center,40px);
+    @include common-text(14px,26px,700,uppercase,#222222);
+    height: 51px;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 300;
+
+    &_item {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &_item:hover .menu {
+        display: flex;
+    }
+
+    &_mod:hover .menu {
+        left: auto;
+        right: 0;
+    }
+
+    &_mod:hover .menu::before {
+        left: auto;
+        right: 10px;
+    }
+}
+
+.bottom {
+    @include flex-layout(space-between,center,0);
+    height: 148px;
+    background-color: #f8f3f4;
+
+    &_left {
+        &_text {
+            @include common-text(24px,20px,900,uppercase,#f16d7f);
+        }
+    }
+
+    &_right {
+        &_text {
+            @include common-text(14px,20px,300,uppercase,#636363);
+
+            a {
+                @include common-text(14px,20px,300,uppercase,#636363);
+            }
+
+            a:hover {
+                color: #f16d7f;
+            }
+        }
+    }
+}
+
+.banner {
+    width: 1600px;
+    height: 600px;
+    position: relative;
+    background-color: #e8e8e8;
+    background: url("../img/image_frame_84.png")no-repeat;
+
+    &_container {
+        width: 100%;
+        position: absolute;
+        top: 220px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+
+        &_rectangle {
+            margin-top: 14px;
+            width: 12px;
+            height: 98px;
+            background-color: #f16d7f;
+        }
+
+        &_box {
+            padding-left: 10px;
+
+            &_t1 {
+                font-family: Lato;
+                font-size: 60px;
+                line-height: 1.2;
+                font-weight: 900;
+                letter-spacing: 0.025em;
+                color: #222222;
+            }
+
+            &_t2 {
+                font-family: Lato;
+                font-size: 40px;
+                line-height: 1.2;
+                font-weight: 900;
+                letter-spacing: 0.025em;
+                color: #222222;
+
+                a {
+                    color: #f16d7f;
+                }
+            }
+        }
+    }
+}
+
+
+

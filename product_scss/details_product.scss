@@ -1,0 +1,28 @@
+/////ALEX OLHOVSKIY//////////
+
+@import 'common-templates';
+
+.details-product {
+    &__title {
+        @include flex-layout(space-between,center,0);
+        padding: 10px;
+        border-bottom: 1px solid #ebebeb; //#ef5b70;
+        border-left: 5px solid #ef5b70;
+
+        &_text {
+            @include common-text(14px,20px,700,uppercase,#ef5b70);
+        }
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        margin-left: 10px;
+        @include common-text(14px,33px,400,none,#6f6e6e);
+    }
+
+    &__link:hover {
+        color: #ef5b70;
+    }
+}
+

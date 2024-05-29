@@ -1,0 +1,332 @@
+/////ALEX OLHOVSKIY//////////
+////////////FOOTER/////////////////
+@import 'common-templates';
+
+.footer {
+    &__top {
+        display: flex;
+        justify-content: center;
+        background: #222224;
+
+        &_img {
+            width: 767px;
+            height: 529px;
+            position: relative;
+            background: url("../img/banner.png");
+
+            &_container {
+                position: absolute;
+                top: 100px;
+                @include flex-layout(flex-start,none,0);
+
+                &_text {
+                    margin-left: 40px;
+
+                    &_1 {
+                        @include common-text(53.7px,1.2,700,uppercase,#ffffff);
+
+                        span {
+                            color: #f16d7f;
+                        }
+                    }
+
+                    &_2 {
+                        @include common-text(32.2px,1.2,700,uppercase,#ffffff);
+                    }
+                }
+            }
+        }
+
+        &_text {
+            &_item {
+                padding: 30px;
+                @include flex-layout(none,none,20px);
+
+                &_text {
+                    width: 230px;
+
+                    &_1 {
+                        @include common-text(20px,1.2,700,none,#fbfbfb);
+                    }
+
+                    &_2 {
+                        @include common-text(14px,24px,300,none,#fbfbfb);
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &__top2 {
+        padding-top: 56px;
+        padding-bottom: 104px;
+        @include flex-layout(center,none,30px);
+        flex-wrap: wrap;
+        background: #222224;
+
+        &_item {
+            width: 360px;
+            margin-top: 48px;
+            height: 134px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &_wrap {
+                display: flex;
+                justify-content: center;
+
+                &_img {
+                }
+            }
+
+
+            &_text1 {
+                @include common-text(20px,24px,400,none,#fbfbfb);
+                text-align: center;
+            }
+
+            &_text2 {
+                @include common-text(14px,17px,400,none,#fbfbfb);
+                text-align: center;
+            }
+        }
+    }
+
+    &__middle {
+        width: 1600px;
+        height: 448px;
+        display: flex;
+        flex-wrap: wrap;
+        background: url(../img/f_phon.jpg) no-repeat center;
+        border:2px solid red;
+        //background-size: contain;
+
+        &_left {
+            height: 448px;
+            @include flex-layout(center,none,31px);
+
+            &_top {
+                padding-top: 150px;
+            }
+
+            &_down {
+                @include flex-layout(none,center,0);
+
+                &_wrap {
+                    &_text {
+                        width: 359px;
+
+                        &_1 {
+                            @include common-text(16px,26px,400,none,#222224);
+                            //font-style: italic;
+                        }
+
+                        &_1:hover {
+                            font-style: italic;
+                        }
+
+                        &_2 {
+                            margin-top: 10px;
+                            @include common-text(16px,26px,700,none,#f16d7f);
+                        }
+
+                        &_3 {
+                            @include common-text(12px,14px,300,none,#222224);
+                        }
+                    }
+
+                    &_blocks {
+                        margin-top: 50px;
+                        @include flex-layout(none,none,8px);
+
+                        div {
+                            width: 38px;
+                            height: 4px;
+                            background-color: #d6d6d6;
+                        }
+
+                        div:hover {
+                            background-color: #f16d7f;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_right {
+            width: 570px;
+            height: 448px;
+            @include flex-layout(center,center,31px);
+            flex-direction: column;
+
+            &_top {
+                &_text1 {
+                    @include common-text(24px,38px,700,none,#222224);
+                    text-align: center;
+                }
+
+                &_text2 {
+                    @include common-text(18px,30px,400,none,#222224);
+                    text-align: center;
+                }
+            }
+
+            &_down {
+                &_form {
+                    height: 49px;
+                    width: 356px;
+                    @include flex-layout(space-between,center,0);
+                    background: #E1E1E1;
+                    border-radius: 20px 20px 20px 20px;
+
+                    &_input {
+                        height: 36px;
+                        width: 170px;
+                        margin-left: 20px;
+                        @include common-text(14px,17px,400,none,#222224);
+                        text-align: left;
+                        background: #E1E1E1;
+                        border: none;
+                        opacity: 30%;
+                        position: relative;
+                    }
+
+                    &_input:invalid {
+                        background: red;
+                        //border: 2px dashed red;
+                    }
+                    //&_input:valid {
+                    //    border: 2px solid green;
+                    //}
+                    //&_input:required {
+                    //background: yellow;
+                    //}
+
+                    &_submit {
+                        height: 49px;
+                        width: 100px;
+                        @include common-text(14px,17px,400,none,#FFFFFF);
+                        text-align: center;
+                        background: #E05C6E;
+                        border-radius: 0 20px 20px 0;
+                        border: none;
+                    }
+
+
+
+                    &_submit:hover {
+                        color: #E05C6E;
+                        background: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    &__brand {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: 440px 1fr;
+        gap: 40px;
+
+        &_left {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            &_item {
+                &_logo {
+                    @include flex-layout(flex-start,center,5px);
+                    margin-bottom: 20px;
+
+                    &_img {
+                    }
+
+                    &_text {
+                        @include common-text(27px,32px,300,uppercase,#3e3e40);
+
+                        &_d {
+                            font-weight: 900;
+                            color: #f16d7f;
+                        }
+                    }
+                }
+
+                &_text {
+                    @include common-text(14px,24px,300,none,#898989);
+                }
+            }
+        }
+
+        &_right {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+
+            &_item {
+                &_title {
+                    @include common-text(18px,40px,700,uppercase,#f16d7f);
+                }
+
+                a {
+                    display: block;
+                    @include common-text(16px,30px,400,none,#898989);
+                }
+
+                a:hover {
+                    color: #f16d7f;
+                }
+            }
+        }
+    }
+
+    &__down {
+        //width: 1600px;
+        height: 79px;
+        @include flex-layout(space-between,center,0);
+        flex-wrap: wrap;
+        background-color: #e6e6e6;
+
+        &_left {
+            width: 360px;
+            @include flex-layout(flex-start,none,0);
+
+            p {
+                @include common-text(16px,42px,400,none,#7a7a7a);
+            }
+        }
+
+        &_right {
+            width: 360px;
+            @include flex-layout(flex-end,none,8px);
+
+            &_button {
+                width: 32px;
+                height: 32px;
+                background: #FFFFFF;
+                @include flex-layout(center,center,0);
+                transition: all 0.5s;
+
+                &_icon path {
+                    fill: #b2b2b2;
+                    transition: all 0.5s;
+                }
+
+                position: relative;
+            }
+
+            &_button:hover {
+                background: #F16D7F;
+            }
+
+            &_button:hover &_button_icon path {
+                fill: white;
+            }
+        }
+    }
+}
+

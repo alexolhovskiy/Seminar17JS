@@ -1,0 +1,49 @@
+@mixin flex-layout($x,$y,$d) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+    gap: $d;
+}
+
+
+@mixin common-text($size,$height,$weight,$transform,$color) {
+    font-family: Lato;
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    text-transform: $transform;
+    color: $color;
+}
+
+
+.burger-menu {
+    width: 200px;
+    padding: 32px;
+    position: absolute;
+    z-index: 2000;
+    left: 0px;
+    top: 25px;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px 0px #00000036;
+
+    ul {
+        padding-left: 10px;
+        text-align: left;
+    }
+
+    a {
+        @include common-text(14px,25px,400,none,#6F6E6E);
+    }
+
+    a:hover {
+        @include common-text(16px,25px,700,none,#000000);
+    }
+
+    h3 {
+        @include common-text(14px,30px,700,none,#000000);
+    }
+
+    h4 {
+        @include common-text(14px,27px,400,none,#F16D7F);
+    }
+}

@@ -1,0 +1,275 @@
+/////ALEX OLHOVSKIY//////////
+//////////////Shoppingcart///////
+@import 'common-templates';
+
+@import 'details_product';
+
+
+//////HEADER/////////
+
+@import 'header';
+
+//////HEADER/////////
+@import 'item';
+
+
+%full-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%space-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@mixin common-text($size,$weight,$color) {
+    font-family: Lato;
+    font-size: $size;
+    line-height: 1.2;
+    font-weight: $weight;
+    text-transform: uppercase;
+    color: $color;
+}
+
+main{
+    margin-bottom:100px;
+}
+
+.text1 {
+    @include common-text(13px,700,#222222);
+    letter-spacing: -0.015em;
+}
+
+.text2 {
+    @include common-text(13px,400,#575757);
+}
+
+
+.text3 {
+    @include common-text(13px,300,#6f6e6e);
+}
+
+
+.grid{
+    margin-top:96px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.title {
+    padding-top:20px;
+    padding-bottom:20px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    justify-items: center;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.first {
+    grid-column: 1 / 4;
+    justify-self: flex-start;
+}
+
+.product {
+    padding-bottom:20px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    justify-items: center;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.product-img {
+    width:100px;
+    height:150px;
+    justify-self: flex-start;
+}
+
+.product-img img{
+    width:100%;
+    height:100%;
+
+}
+
+
+.characteristic {
+    grid-column: 2 / 4;
+    justify-self: flex-start;
+}
+
+.button-set {
+    margin-top: 44px;
+    @extend %space-between-center;
+}
+
+.button {
+    @extend %full-center;
+    width: 235px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+}
+
+
+
+.button-text {
+    @include common-text(14px,700,#4a4a4a);
+}
+
+
+.button:hover {
+    background-color: #f16d7f;
+}
+
+.button:hover .button-text {
+    color: #ffffff;
+}
+
+
+.bottom-grid {
+    margin-top: 63px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+
+
+
+
+.bottom-text1 {
+    @include common-text(16px,700,#222222);
+}
+
+.bottom-text11 {
+    @include common-text(16px,700,#222222);
+}
+
+.bottom-text11 span {
+    color: #f16d7f;
+}
+
+.bottom-text2 {
+    @include common-text(11px,700,#4a4a4a);
+}
+
+.bottom-text3 {
+    margin-top: 28px;
+    @include common-text(14px,300,#000000);
+}
+
+.bottom-text4 {
+    @include common-text(11px,400,#4a4a4a);
+}
+
+.bottom-text5 {
+    @include common-text(16px,700,#ffffff);
+}
+
+
+
+.bottom-input {
+    margin-top: 21px;
+    padding-left: 10px;
+    width: 355px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 1px solid #f5f3f3;
+}
+
+
+
+.lust-item-wrap {
+    width: 360px;
+    height: 214px;
+    @extend %full-center;
+    background-color: #f5f3f3;
+}
+
+.lust-item {
+    display: grid;
+    grid-template-columns: 273px;
+}
+
+.text-wrap1 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.text-wrap2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+
+.lust-item-top {
+    width: 100%;
+    height: 50%;
+}
+
+.lust-item-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border-top: 1px solid #4a4a4a;
+}
+
+.button-wrap {
+    width: 100%;
+    display: flex;
+}
+
+.button3 {
+    margin-top: 23px;
+    @extend %full-center;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+}
+
+.button3:hover {
+    border-color: #f16d7f;
+}
+
+.button3:hover .bottom-text2 {
+    color: #f16d7f;
+}
+
+.button-wrap2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button2 {
+    margin-top: 17px;
+    width: 273px;
+    height: 50px;
+    @extend %full-center;
+    background-color: #f16d7f;
+    border: 1px solid #f5f3f3;
+}
+
+.button2:hover {
+    background-color: #ffffff;
+    border: 1px solid #f16d7f;
+}
+
+.button2:hover .bottom-text5 {
+    color: #f16d7f;
+}
+////////////FOOTER/////////////////
+@import 'footer';
+////////////FOOTER/////////////////

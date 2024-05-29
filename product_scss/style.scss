@@ -1,0 +1,164 @@
+/////ALEX OLHOVSKIY//////////
+//////Product//////////////
+
+@import 'common-templates';
+
+@import 'details_product';
+
+
+//////HEADER/////////
+
+@import 'header';
+
+//////HEADER/////////
+@import 'item';
+
+.catalog {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 243px 1fr;
+    justify-content: center;
+    gap: 49px;
+
+    &__left {
+        &_category {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__right {
+        &_top {
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(263px,1fr));
+            gap: 20px;
+
+            &_item {
+                &_title {
+                    @include common-text(14px,20px,700,uppercase,#6f6e6e);
+                }
+
+                &_box {
+                    margin-top: 20px;
+                    @include flex-layout(flex-start,0,10px);
+                    flex-wrap: wrap;
+                    @include common-text(14px,20px,400,none,#6f6e6e);
+
+                    &_el1 {
+                        padding-right: 10px;
+                        //@include flex-layout(center,center,0);
+                        border-right: 1px solid #dfdfdf;
+                    }
+
+                    &_el2 {
+                        @include flex-layout(flex-start,0,5px);
+                    }
+
+                    &_price-range {
+                        width: 262px;
+                        accent-color: #f16d7f;
+                    }
+
+                    &_value {
+                        width: 100%;
+                        @include flex-layout(space-between,center,0);
+                    }
+                }
+            }
+        }
+
+        &_middle {
+            height: 50px;
+            background-color: #f3f3f3;
+            padding-left: 20px;
+            margin-bottom: 40px;
+            @include flex-layout(flex-start,center,10px);
+
+            &_sort {
+                @include flex-layout(flex-start,center,2px);
+                @include common-text(14px,26px,400,none,#6f6e6e);
+
+                &_label {
+                    height: 30px;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    @include flex-layout(center,center,0);
+                    background: rgb(255, 255, 255);
+                }
+
+                &_box {
+                    @include flex-layout(center,center,0);
+
+                    &_text {
+                        height: 30px;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        @include flex-layout(center,center,0);
+                        background: rgb(255, 255, 255);
+                    }
+
+                    &_img {
+                        width: 30px;
+                        height: 30px;
+                        border-left: 1px solid #f3f3f3;
+                        background: rgb(255, 255, 255);
+                        @include flex-layout(center,center,0);
+                    }
+                }
+            }
+        }
+
+        &_grid-main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(263px,1fr));
+            gap: 30px;
+        }
+
+        &_bottom {
+            @include flex-layout(space-between,center,0);
+            margin-top: 43px;
+            margin-bottom: 110px;
+
+
+            &_pages {
+                width: 261px;
+                height: 44px;
+                background-color: #ffffff;
+                border: 1px solid #ebebeb;
+                border-radius: 3px;
+                @include common-text(16px,26px,700,none,#c4c4c4);
+                @include flex-layout(space-around,center,0);
+
+                a {
+                    @include common-text(16px,26px,700,none,#c4c4c4);
+                }
+
+                a:hover {
+                    color: #ef5b70;
+                }
+            }
+
+            &_button {
+                height: 44px;
+                padding-left: 50px;
+                padding-right: 50px;
+                @include flex-layout(center,center,0);
+                background-color: #ffffff;
+                border: 1px solid #ef5b70;
+                border-radius: 3px;
+                @include common-text(16px,26px,700,none,#ef5b70);
+            }
+
+            &_button:hover {
+                background-color: #ef5b70;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+////////////FOOTER/////////////////
+
+@import 'footer';
+
+////////////FOOTER/////////////////

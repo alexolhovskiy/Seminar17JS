@@ -1,0 +1,161 @@
+/////ALEX OLHOVSKIY//////////
+//////////CheckOut////////////
+
+@import 'common-templates';
+
+@import 'details_product';
+
+
+//////HEADER/////////
+
+@import 'header';
+
+//////HEADER/////////
+@import 'item';
+
+.title {
+    margin: 30px;
+    display: block;
+    @include common-text(16px,1.2,700,uppercase,#222222);
+}
+
+.text1 {
+    @include common-text(13px,1.2,400,uppercase,#222222);
+}
+
+.text2 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    @include common-text(13px,20px,400,uppercase,#b3b2b2);
+}
+
+.text3 {
+    @include common-text(12px,1.2,400,uppercase,#222222);
+}
+
+.text5 {
+    @include common-text(14px,20px,400,none,rgb(255, 0, 0));
+}
+
+.text6 {
+    @include common-text(14px,20px,400,none,rgb(0, 0, 0));
+}
+
+.cout-item {
+    //height: 72px;
+    //display: flex;
+    //justify-content: flex-start;
+    //align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+main {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    &__left {
+        padding: 30px;
+
+        form {
+            .radio-box {
+                margin-bottom: 33px;
+
+                &_item {
+                    margin-top: 20px;
+
+                    &_input {
+                        accent-color: black;
+                    }
+                }
+            }
+
+            .text-box {
+                margin-top: 18px;
+                margin-bottom: 38px;
+
+                &_item {
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 5px;
+                    @include common-text(13px,20px,400,none,#b3b2b2);
+                }
+            }
+
+
+
+            .input-box {
+                input {
+                    margin-top: 16px;
+                    margin-bottom: 23px;
+                    padding-left:10px;
+                    width: 380px;
+                    height: 45px;
+                    background-color: #ffffff;
+                    border: 1px solid #eaeaea;
+                }
+
+                input:invalid {
+                    background: red;
+                }
+            }
+
+            .button-box {
+                margin-top: 32px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 32px;
+
+                .button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 180px;
+                    height: 50px;
+                    background-color: #ffffff;
+                    border: 1px solid #eaeaea;
+
+                    &_text {
+                        @include common-text(14px,1.2,700,uppercase,#4a4a4a);
+                    }
+                }
+
+                .button:hover {
+                    border: 1px solid #f16d7f;
+                }
+
+                .button:hover .button_text {
+                    color: #f16d7f;
+                }
+
+                a:hover{
+                    color:red;
+                }
+            }
+        }
+    }
+}
+
+
+.invalid {
+    color: red;
+}
+
+
+//.form-input:invalid {
+//    background: red;
+//}
+//.form-input:required {
+//    background: red;
+//}
+////////////FOOTER/////////////////
+
+@import 'footer';
+////////////FOOTER/////////////////

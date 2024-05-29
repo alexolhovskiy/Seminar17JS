@@ -1,0 +1,70 @@
+/////ALEX OLHOVSKIY//////////
+
+@import 'common-templates';
+
+.menu {
+    padding: 20px;
+    display: none;
+    gap: 20px;
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 37px;
+    border: 1px solid #e8e8e8;
+    background-color: #ffffff;
+    border-radius: 5px;
+    z-index: 20;
+
+    &__block {
+        &_h {
+            margin-left: 10px;
+            width: 235px;
+            @include common-text(14px,32px,400,uppercase,#232323);
+            border-bottom: 1px solid #e8e8e8;
+
+            &_space {
+                margin-top: 23px;
+            }
+        }
+
+        &_a {
+            margin-left: 10px;
+            display: block;
+            @include common-text(14px,28px,400,none,#646464);
+        }
+
+        &_sale {
+            margin-top: 15px;
+            height: 118px;
+            @include flex-layout(flex-end,flex-end,40px);
+            background: url("../img/sale.png");
+
+            &_super {
+                margin: 10px;
+                @include common-text(22px,28px,900,uppercase,#ffffff);
+            }
+        }
+    }
+}
+
+.menu:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: rgb(255,255,255);
+    border-top: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+    position: absolute;
+    left: 10px;
+    top: -5px;
+    right: auto;
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
+
